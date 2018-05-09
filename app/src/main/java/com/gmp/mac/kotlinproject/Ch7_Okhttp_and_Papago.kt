@@ -11,9 +11,10 @@ import java.io.IOException
 
 //Code -> Convert JavaFile to Kotlin File
 
-class MainActivity : AppCompatActivity() {
+class Ch7_Okhttp_and_Papago : AppCompatActivity() {
 
 
+    //네이버개발자센터 -> 어플리케이션 등록 -> PapagoNMT번역
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
