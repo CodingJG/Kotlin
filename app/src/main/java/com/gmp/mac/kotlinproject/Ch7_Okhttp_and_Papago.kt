@@ -14,6 +14,7 @@ import java.io.IOException
 class Ch7_Okhttp_and_Papago : AppCompatActivity() {
 
 
+    //implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     //네이버개발자센터 -> 어플리케이션 등록 -> PapagoNMT번역
 
     override fun onCreate(savedInstanceState: Bundle?) {

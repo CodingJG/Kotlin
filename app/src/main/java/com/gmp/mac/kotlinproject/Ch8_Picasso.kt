@@ -22,6 +22,8 @@ import java.io.IOException
 
 class Ch8_Picasso : AppCompatActivity() {
 
+    //implementation 'com.squareup.picasso:picasso:2.71828'
+    //implementation 'com.android.support:recyclerview-v7:27.1.1'
 
     val imageUrls = arrayOf(
             "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&h=350",

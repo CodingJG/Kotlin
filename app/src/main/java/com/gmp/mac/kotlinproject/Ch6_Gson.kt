@@ -10,7 +10,7 @@ import com.google.gson.Gson
 
 class Ch6_Gson : AppCompatActivity() {
 
-
+    //implementation 'com.google.code.gson:gson:2.8.4'
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
