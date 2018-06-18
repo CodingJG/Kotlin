@@ -27,14 +27,13 @@ import okhttp3.*
 import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.IOException
-import java.text.SimpleDateFormat
 import java.util.*
 
 
 //Code -> Convert JavaFile to Kotlin File
 
 
-class MainActivity : AppCompatActivity() {
+class Ch13_Typealias : AppCompatActivity() {
 
 
 
@@ -42,9 +41,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var aInner :AInner = A().Inner()
+        var sSet : SSet = setOf()
+        var jgMap : JGMap<String> = mutableMapOf()
+
+        var predicate : Predicate<Int> = {it >0 }
+        println(foo(predicate))
+
+        var handler :Handler = {i,s,any -> println(i.toString()+s+any.toString())}
+        foo2(handler)
 
     }
 
 
 }
 
+class A{
+
+    inner class Inner
+}
+
+typealias AInner = A.Inner
+typealias SSet = Set<String>
+typealias JGMap<T> = MutableMap<T,MutableList<String >>
+typealias Predicate<T> = (T) -> Boolean
+
+fun foo(predicate : Predicate<Int>)= predicate(10 )
+
+typealias Handler = (Int,String,Any) -> Unit
+fun foo2(handler :Handler) = handler(1,"JG",27)

@@ -34,7 +34,7 @@ import java.util.*
 //Code -> Convert JavaFile to Kotlin File
 
 
-class MainActivity : AppCompatActivity() {
+class Ch14_Extensions : AppCompatActivity() {
 
 
 
@@ -42,9 +42,50 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var date = "2018-06-18 15:50:00".toDay()
+        println(date)
 
+        var date2 = "2018-06-18 15:50:00".toTime()
+        println(date2)
+
+        var date3 = Date().toDay()
+        println(date3)
+
+        var date4 = Date().toTime()
+        println(date4)
     }
 
 
 }
 
+fun String.toDay() :String{
+
+    var parserDateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
+    var date = parserDateFormat.parse(this)
+    var dateFormat = SimpleDateFormat("yyyy년 MM월 dd일")
+
+    return dateFormat.format(date)
+}
+
+fun String.toTime() :String{
+
+    var parserDateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
+    var date = parserDateFormat.parse(this)
+    var dateFormat = SimpleDateFormat("hh시 mm")
+
+    return dateFormat.format(date)
+}
+
+fun Date.toDay():String{
+
+    var dateFormat = SimpleDateFormat("yyyy년 MM월 dd일")
+
+    return dateFormat.format(this)
+}
+
+fun Date.toTime():String{
+
+    var dateFormat = SimpleDateFormat("hh시 mm")
+
+    return dateFormat.format(this)
+}

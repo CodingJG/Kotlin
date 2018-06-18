@@ -27,14 +27,13 @@ import okhttp3.*
 import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.*
+
 
 
 //Code -> Convert JavaFile to Kotlin File
 
 
-class MainActivity : AppCompatActivity() {
+class Ch11_Apply : AppCompatActivity() {
 
 
 
@@ -42,9 +41,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Intent(this,MainActivity2::class.java).apply {
+
+            putExtra("String","Junnine")
+            putExtra("Number",27)
+            startActivity(this)
+        }
 
     }
 
 
-}
 
+
+
+}

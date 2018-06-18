@@ -27,24 +27,30 @@ import okhttp3.*
 import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.*
+
 
 
 //Code -> Convert JavaFile to Kotlin File
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
 
+        var string = intent.getStringExtra("String")
+        var number = intent.getIntExtra("Number",0)
+
+        println(string)
+        println(number)
 
     }
 
 
-}
 
+
+
+}

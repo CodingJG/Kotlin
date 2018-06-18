@@ -27,14 +27,13 @@ import okhttp3.*
 import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.IOException
-import java.text.SimpleDateFormat
 import java.util.*
 
 
 //Code -> Convert JavaFile to Kotlin File
 
 
-class MainActivity : AppCompatActivity() {
+class Ch12_Run : AppCompatActivity() {
 
 
 
@@ -42,9 +41,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //익명함수
+        var oddEven = run {
+            var random = Random().nextInt(100)
+
+            if(random%2 == 0){
+
+                "$random(짝)"
+
+            }else{
+                "$random(홀)"
+            }
+        }
+
+        println( "$oddEven 입니다.")
 
     }
 
 
-}
 
+
+
+}
